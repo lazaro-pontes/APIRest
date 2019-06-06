@@ -4,10 +4,12 @@ const requireDir = require('require-dir')
 requireDir("../models")
 const Product = mongoose.model('Product')
 
+
 module.exports = {
     async index(req, res){
-        const products = await Product.find()
-
+        const {page = 1} = await req.query
+        const paginateOptions = {page, limit: 5}
+        const products = await Product.paginate({}, paginateOptions)
         return res.json(products)
     },
     async store(req, res){
