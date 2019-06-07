@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const routes = require('./src/routes')
 
@@ -13,6 +14,7 @@ mongoose.connect('mongodb+srv://lazaro:AMORes@cluster0-wtocj.mongodb.net/test?re
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
+app.use(cors())
 
 
 //rotas
