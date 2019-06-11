@@ -20,5 +20,5 @@ app.use(cors())
 //rotas
 app.use('/api', routes)
 
-app.listen(3000)
+app.listen(3001)
 console.log("servidor ouvindo")
