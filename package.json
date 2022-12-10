@@ -13,7 +13,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fstream": "^1.0.12",
     "mongoose": "^5.5.13",
     "mongoose-paginate-v2": "^1.3.0",
